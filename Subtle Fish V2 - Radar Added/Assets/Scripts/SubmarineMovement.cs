@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SubmarineMovement : MonoBehaviour {
 
@@ -44,5 +45,11 @@ public class SubmarineMovement : MonoBehaviour {
 				rb.AddForce (new Vector2 (0, -speed));
 			}
 		}
+	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+		if (coll.gameObject.tag == "Enemy")
+			SceneManager.LoadScene ("Test", LoadSceneMode.Single);
+
 	}
 }
