@@ -8,7 +8,8 @@ public class BeaconLight : MonoBehaviour {
 	Light beaconLight;
 	Color pink;
 	Color purple;
-	string[] colors = new string[4] {"yellow", "pink", "purple", "green"};
+	Color darkOrange; 
+	string[] colors = new string[4] {"yellow", "orange", "purple", "green"};
 	int randomIndex;
 	string randomColor;
 	int[] colorSequence;
@@ -31,8 +32,9 @@ public class BeaconLight : MonoBehaviour {
 		beaconLight = GetComponentInChildren<Light> ();
 		pink = new Color (255/255f, 192/255f, 203/225f);
 		purple = new Color (255/255f, 0 / 255f, 255/255f);
+		darkOrange = new Color (255 / 255f, 127 / 255f, 80 / 255f);
 
-		lightCounter = lightTimerAmount;
+		lightCounter = lightTimerAmount; 
 
 	}
 
@@ -75,8 +77,8 @@ public class BeaconLight : MonoBehaviour {
 				if (colors [color1] == "yellow") {
 					beaconLight.color = Color.yellow;
 				}
-				if (colors [color1] =="pink") {
-					beaconLight.color = pink;
+				if (colors [color1] =="orange") {
+					beaconLight.color = darkOrange;
 				}
 				if (colors [color1] == "purple") {
 					beaconLight.color = purple;
@@ -89,8 +91,8 @@ public class BeaconLight : MonoBehaviour {
 				if (colors [color2] == "yellow") {
 					beaconLight.color = Color.yellow;
 				}
-				if (colors [color2] == "pink") {
-					beaconLight.color = pink;
+				if (colors [color2] == "orange") {
+					beaconLight.color = darkOrange;
 				}
 				if (colors [color2] == "purple") {
 					beaconLight.color = purple;
@@ -103,8 +105,8 @@ public class BeaconLight : MonoBehaviour {
 				if (colors [color3] == "yellow") {
 					beaconLight.color = Color.yellow;
 				}
-				if (colors [color3] == "pink") {
-					beaconLight.color = pink;
+				if (colors [color3] == "orange") {
+					beaconLight.color = darkOrange;
 				}
 				if (colors [color3] == "purple") {
 					beaconLight.color = purple;
@@ -117,8 +119,8 @@ public class BeaconLight : MonoBehaviour {
 				if (colors [color4] == "yellow") {
 					beaconLight.color = Color.yellow;
 				}
-				if (colors [color4] == "pink") {
-					beaconLight.color = pink;
+				if (colors [color4] == "orange") {
+					beaconLight.color = darkOrange;
 				}
 				if (colors [color4] == "purple") {
 					beaconLight.color = purple;
