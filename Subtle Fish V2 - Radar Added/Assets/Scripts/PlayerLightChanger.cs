@@ -13,6 +13,11 @@ public class PlayerLightChanger : MonoBehaviour {
 	Color pink;
 	Color purple;
 	Color darkOrange;
+	public static bool light1correct = false;
+	public static bool light2correct = false;
+	public static bool light3correct = false;
+	public static bool light4correct = false;
+
 
 	// Use this for initialization
 	void Start () {
@@ -51,6 +56,34 @@ public class PlayerLightChanger : MonoBehaviour {
 			lightCounter = lightTimerAmount;
 		}
 
+		if (playerLight.color == BeaconLight.firstColor) {
+			print ("Color 1 correct");
+			light1correct = true;
+		}
+		if (light1correct) {
+			if (playerLight.color == BeaconLight.secondColor) {
+				print ("Color 2 correct");
+				light2correct = true;
+			} else {
+				ResetPlayerColors ();
+			}
+		}
+		if (light2correct) {
+			if (playerLight.color == BeaconLight.thirdColor) {
+				print ("Color 3 correct");
+				light3correct = true;
+			} else {
+				ResetPlayerColors ();
+			}
+		}
+		if (light3correct) {
+			if (playerLight.color == BeaconLight.fourthColor) {
+				print ("Color 4 correct");
+				light4correct = true;
+			} else {
+				ResetPlayerColors ();
+			}
+		}
 		//print (lightCounter);
 		Timer ();
 	}
@@ -66,5 +99,13 @@ public class PlayerLightChanger : MonoBehaviour {
 			}
 		}
 
+	}
+
+	void ResetPlayerColors()
+	{
+		light1correct = false;
+		light2correct = false;
+		light3correct = false;
+		light4correct = false;
 	}
 }

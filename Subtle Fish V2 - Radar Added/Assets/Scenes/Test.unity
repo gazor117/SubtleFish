@@ -1806,6 +1806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 896840328}
   - component: {fileID: 896840327}
+  - component: {fileID: 896840329}
   m_Layer: 0
   m_Name: Beacon
   m_TagString: Untagged
@@ -1841,6 +1842,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &896840329
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896840326}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.2987375, y: 0}
+  serializedVersion: 2
+  m_Radius: 7.31413
 --- !u!4 &987760147 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4667772783669374, guid: 2c3dfc4eb6112c6429a20ead4999ca1c,

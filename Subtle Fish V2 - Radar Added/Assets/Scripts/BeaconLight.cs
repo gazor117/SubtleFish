@@ -9,7 +9,8 @@ public class BeaconLight : MonoBehaviour {
 	Color pink;
 	Color purple;
 	Color darkOrange; 
-	string[] colors = new string[4] {"yellow", "orange", "purple", "green"};
+	public static Color firstColor, secondColor, thirdColor, fourthColor; // first - fourth colors in the current beacon sequence
+	public static string[] colors = new string[4] {"yellow", "orange", "purple", "green"};
 	int randomIndex;
 	string randomColor;
 	int[] colorSequence;
@@ -22,7 +23,8 @@ public class BeaconLight : MonoBehaviour {
 	int sequenceLength = 4;
 	int currentNum = 0;
 	int currentColor = 1;
-	int color1, color2, color3, color4;
+	public static int color1, color2, color3, color4;
+	public static bool playerInBeacon = false;
 	//bool sequenceComplete = false;
 
 
@@ -64,7 +66,7 @@ public class BeaconLight : MonoBehaviour {
 		}*/
 
 		currentNum ++;
-		if (currentNum == 1) {
+		if (currentNum == 1) { // Randomly assigns four colors in the beacon sequence
 			color1 = randomIndex;
 		}if (currentNum == 2) {
 			color2 = randomIndex;
@@ -79,57 +81,73 @@ public class BeaconLight : MonoBehaviour {
 			if (currentColor == 1) {
 				if (colors [color1] == "yellow") {
 					beaconLight.color = Color.yellow;
+					firstColor = Color.yellow;
 				}
 				if (colors [color1] =="orange") {
 					beaconLight.color = darkOrange;
+					firstColor = darkOrange;
 				}
 				if (colors [color1] == "purple") {
 					beaconLight.color = purple;
+					firstColor = purple;
 				}
 				if (colors [color1] == "green") {
 					beaconLight.color = Color.green;
+					firstColor = Color.green;
 				}
 			}
 			if (currentColor == 2) {
 				if (colors [color2] == "yellow") {
 					beaconLight.color = Color.yellow;
+					secondColor = Color.yellow;
 				}
 				if (colors [color2] == "orange") {
 					beaconLight.color = darkOrange;
+					secondColor = darkOrange;
 				}
 				if (colors [color2] == "purple") {
 					beaconLight.color = purple;
+					secondColor = purple;
 				}
 				if (colors [color2] == "green") {
 					beaconLight.color = Color.green;
+					secondColor = Color.green;
 				}
 			}
 			if (currentColor == 3) {
 				if (colors [color3] == "yellow") {
 					beaconLight.color = Color.yellow;
+					thirdColor = Color.yellow;
 				}
 				if (colors [color3] == "orange") {
 					beaconLight.color = darkOrange;
+					thirdColor = darkOrange;
 				}
 				if (colors [color3] == "purple") {
 					beaconLight.color = purple;
+					thirdColor = purple;
 				}
 				if (colors [color3] == "green") {
 					beaconLight.color = Color.green;
+					thirdColor = Color.green;
 				}
 			}
 			if (currentColor == 4) {
 				if (colors [color4] == "yellow") {
 					beaconLight.color = Color.yellow;
+					fourthColor = Color.yellow;
 				}
 				if (colors [color4] == "orange") {
 					beaconLight.color = darkOrange;
+					fourthColor = darkOrange;
 				}
 				if (colors [color4] == "purple") {
 					beaconLight.color = purple;
+					fourthColor = purple;
 				}
 				if (colors [color4] == "green") {
 					beaconLight.color = Color.green;
+					fourthColor = Color.green;
 				}
 			}
 		}
@@ -137,7 +155,7 @@ public class BeaconLight : MonoBehaviour {
 
 		Timer ();
 		//print (currentColor);
-		print (waitTime);
+		//print (waitTime);
 
 	}
 
@@ -145,6 +163,15 @@ public class BeaconLight : MonoBehaviour {
 	{
 		if (col.tag == "Player") {
 			print ("Player Detected");
+			playerInBeacon = true;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D col)
+	{
+		if (col.tag == "Player") {
+			print ("Player outside beacon");
+			playerInBeacon = false;
 		}
 	}
 
@@ -183,7 +210,7 @@ public class BeaconLight : MonoBehaviour {
 		beaconLight.enabled = false;
 		if (waitTime < 0) {
 			beaconLight.enabled = true;
-			print ("Beacon Enabled");
+			//print ("Beacon Enabled");
 			currentColor = 1;
 			waitTime = beaconWaitTime;
 		}
