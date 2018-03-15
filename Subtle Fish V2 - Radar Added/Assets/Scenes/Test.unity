@@ -1824,6 +1824,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94be19e4a6cc30b47933468397b049a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightTimerAmount: 0.88
+  beaconWaitTime: 0.06
 --- !u!4 &896840328
 Transform:
   m_ObjectHideFlags: 0

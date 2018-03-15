@@ -13,7 +13,9 @@ public class BeaconLight : MonoBehaviour {
 	int randomIndex;
 	string randomColor;
 	int[] colorSequence;
-	float lightTimerAmount = 3f;
+	public float lightTimerAmount = 3f;
+	public float beaconWaitTime = 3f;
+	float waitTime;
 	float lightCounter;
 	bool startTimer = false;
 	bool startSequenceTimer = false;
@@ -35,6 +37,7 @@ public class BeaconLight : MonoBehaviour {
 		darkOrange = new Color (255 / 255f, 127 / 255f, 80 / 255f);
 
 		lightCounter = lightTimerAmount; 
+		waitTime = beaconWaitTime;
 
 	}
 
@@ -133,7 +136,8 @@ public class BeaconLight : MonoBehaviour {
 
 
 		Timer ();
-		print (currentColor);
+		//print (currentColor);
+		print (waitTime);
 
 	}
 
@@ -166,9 +170,23 @@ public class BeaconLight : MonoBehaviour {
 				currentColor ++;
 				lightCounter = lightTimerAmount;
 				if (currentColor > sequenceLength) {
-					currentColor = 1;
+					BeaconWait ();
+					//currentColor = 1;
 				}
 			}
 		}
+	}
+
+	void BeaconWait()
+	{
+		waitTime -= Time.deltaTime;
+		beaconLight.enabled = false;
+		if (waitTime < 0) {
+			beaconLight.enabled = true;
+			print ("Beacon Enabled");
+			currentColor = 1;
+			waitTime = beaconWaitTime;
+		}
+
 	}
 }
