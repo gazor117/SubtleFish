@@ -5,6 +5,7 @@ using UnityEngine;
 public class Alert : MonoBehaviour {
 
 	public Chase chase;
+	public Hide subCloak;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,7 @@ public class Alert : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D (Collider2D other) {
-		if (other.tag == "Player") {
+		if (other.tag == "Player" && subCloak.canBeSeen == true) {
 			chase.setOff ();
 		}
 	}

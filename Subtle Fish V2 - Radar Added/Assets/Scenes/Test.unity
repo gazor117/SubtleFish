@@ -567,8 +567,19 @@ Prefab:
       propertyPath: m_Range
       value: 4.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114376606180900660, guid: 6a10502a0547800459ff283e1588594c,
+        type: 2}
+      propertyPath: playerMove
+      value: 
+      objectReference: {fileID: 595091175}
+    - target: {fileID: 114115245627172474, guid: 6a10502a0547800459ff283e1588594c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114047645515304320, guid: 6a10502a0547800459ff283e1588594c, type: 2}
+    - {fileID: 114376606180900660, guid: 6a10502a0547800459ff283e1588594c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6a10502a0547800459ff283e1588594c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &282014511 stripped
@@ -922,7 +933,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294966527
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1092,6 +1103,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1530972690034878, guid: 6a10502a0547800459ff283e1588594c,
     type: 2}
   m_PrefabInternal: {fileID: 271506694}
+--- !u!114 &595091175 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114023726739059258, guid: 6a10502a0547800459ff283e1588594c,
+    type: 2}
+  m_PrefabInternal: {fileID: 271506694}
+  m_Script: {fileID: 11500000, guid: f86f07837d7c02848ac2659b8efb5ec5, type: 3}
 --- !u!1 &748857480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,7 +1858,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114648830371778656, guid: 816e2fcf7a4a1f643b92b423c8b94078,
+    - target: {fileID: 114378554522247150, guid: 816e2fcf7a4a1f643b92b423c8b94078,
+        type: 2}
+      propertyPath: subCloak
+      value: 
+      objectReference: {fileID: 1529190008}
+    - target: {fileID: 114481904276823226, guid: 816e2fcf7a4a1f643b92b423c8b94078,
         type: 2}
       propertyPath: player
       value: 
@@ -1856,7 +1878,7 @@ Prefab:
       propertyPath: patrolPoint2
       value: 
       objectReference: {fileID: 1073824810}
-    - target: {fileID: 114481904276823226, guid: 816e2fcf7a4a1f643b92b423c8b94078,
+    - target: {fileID: 114648830371778656, guid: 816e2fcf7a4a1f643b92b423c8b94078,
         type: 2}
       propertyPath: player
       value: 
@@ -1936,6 +1958,25 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1514184666}
+--- !u!1 &1529190004 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1852642203827968, guid: 6a10502a0547800459ff283e1588594c,
+    type: 2}
+  m_PrefabInternal: {fileID: 271506694}
+--- !u!114 &1529190008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529190004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736af0917662b2a4caa5505692c2d98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  playerMove: {fileID: 595091175}
+  canBeSeen: 1
 --- !u!1 &1542348101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,7 +2113,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114716397814512120, guid: f4e0b208db723de4d8c1bc4d4ce6bd8e,
+    - target: {fileID: 114125414753289236, guid: f4e0b208db723de4d8c1bc4d4ce6bd8e,
+        type: 2}
+      propertyPath: subCloak
+      value: 
+      objectReference: {fileID: 1529190008}
+    - target: {fileID: 114858861151067282, guid: f4e0b208db723de4d8c1bc4d4ce6bd8e,
         type: 2}
       propertyPath: player
       value: 
@@ -2087,7 +2133,7 @@ Prefab:
       propertyPath: patrolPoint2
       value: 
       objectReference: {fileID: 1073824810}
-    - target: {fileID: 114858861151067282, guid: f4e0b208db723de4d8c1bc4d4ce6bd8e,
+    - target: {fileID: 114716397814512120, guid: f4e0b208db723de4d8c1bc4d4ce6bd8e,
         type: 2}
       propertyPath: player
       value: 
