@@ -13,10 +13,13 @@ public class PlayerLightChanger : MonoBehaviour {
 	Color pink;
 	Color purple;
 	Color darkOrange;
-	public static bool light1correct = false;
+	public static string correctSequence;
+	/*public static bool light1correct = false;
 	public static bool light2correct = false;
 	public static bool light3correct = false;
-	public static bool light4correct = false;
+	public static bool light4correct = false;*/
+	public int colorStage = 0;
+	bool buttonPressed = false;
 
 
 	// Use this for initialization
@@ -28,10 +31,10 @@ public class PlayerLightChanger : MonoBehaviour {
 		purple = new Color (255/255f, 0 / 255f, 255/255f);
 		darkOrange = new Color (255 / 255f, 127 / 255f, 80 / 255f);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+		buttonPressed = false;
 		if (lightCounter < 1) {
 			playerLight.color = Color.white;
 		}
@@ -39,53 +42,68 @@ public class PlayerLightChanger : MonoBehaviour {
 			playerLight.color = Color.yellow;
 			startTimer = true;
 			lightCounter = lightTimerAmount;
+			buttonPressed = true;
 		}
 		if (Input.GetButton ("orangeLight")) {
 			playerLight.color = darkOrange;
 			startTimer = true;
 			lightCounter = lightTimerAmount;
+			buttonPressed = true;
 		}
 		if (Input.GetButton ("purpleLight")) {
 			playerLight.color = purple;
 			startTimer = true;
 			lightCounter = lightTimerAmount;
-		}
+			buttonPressed = true;}
 		if (Input.GetButton ("greenLight")) {
 			playerLight.color = Color.green;
 			startTimer = true;
 			lightCounter = lightTimerAmount;
+			buttonPressed = true;
 		}
 
-		if (playerLight.color == BeaconLight.firstColor) {
-			print ("Color 1 correct");
-			light1correct = true;
-		}
-		if (light1correct) {
-			if (playerLight.color == BeaconLight.secondColor) {
-				print ("Color 2 correct");
-				light2correct = true;
-			} else {
+		if (colorStage == 3) {
+			if (playerLight.color == BeaconLight.fourthColor && buttonPressed == true) {
+				//print ("Color 4 correct");
+				colorStage = 4;
+				buttonPressed = false;
+			} else if (playerLight.color != BeaconLight.fourthColor && buttonPressed == true){
 				ResetPlayerColors ();
 			}
 		}
-		if (light2correct) {
-			if (playerLight.color == BeaconLight.thirdColor) {
-				print ("Color 3 correct");
-				light3correct = true;
-			} else {
+
+		if (colorStage == 2) {
+			if (playerLight.color == BeaconLight.thirdColor && buttonPressed == true) {
+				//print ("Color 3 correct");
+				colorStage = 3;
+				buttonPressed = false;
+			} else if (playerLight.color != BeaconLight.thirdColor && buttonPressed == true){
 				ResetPlayerColors ();
 			}
 		}
-		if (light3correct) {
-			if (playerLight.color == BeaconLight.fourthColor) {
-				print ("Color 4 correct");
-				light4correct = true;
-			} else {
+		if (colorStage == 1){
+			if (playerLight.color == BeaconLight.secondColor && buttonPressed == true) {
+				//print ("Color 2 correct");
+				colorStage = 2;
+				buttonPressed = false;
+			} else if (playerLight.color != BeaconLight.secondColor && buttonPressed == true){
+				//ResetPlayerColors ();
+			}
+		}
+
+		if (colorStage == 0) {
+			if (playerLight.color == BeaconLight.firstColor && buttonPressed == true) {
+				//print ("Color 1 correct");
+				colorStage = 1;
+				buttonPressed = false;
+			} else if (playerLight.color != BeaconLight.firstColor && buttonPressed == true) {
 				ResetPlayerColors ();
 			}
 		}
 		//print (lightCounter);
 		Timer ();
+		print (colorStage);
+		print (buttonPressed);
 	}
 
 	void Timer()
@@ -95,6 +113,7 @@ public class PlayerLightChanger : MonoBehaviour {
 			lightCounter -= Time.deltaTime;
 			if (lightCounter < 0) {
 				lightCounter = lightTimerAmount;
+				//buttonPressed = false;
 				startTimer = false;
 			}
 		}
@@ -103,9 +122,7 @@ public class PlayerLightChanger : MonoBehaviour {
 
 	void ResetPlayerColors()
 	{
-		light1correct = false;
-		light2correct = false;
-		light3correct = false;
-		light4correct = false;
+		colorStage = 0;
+		buttonPressed = false;
 	}
 }
