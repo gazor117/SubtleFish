@@ -25,6 +25,7 @@ public class BeaconLight : MonoBehaviour {
 	int currentColor = 1;
 	public static int color1, color2, color3, color4;
 	public static bool playerInBeacon = false;
+	public static bool beaconComplete;
 	//bool sequenceComplete = false;
 
 
@@ -154,6 +155,9 @@ public class BeaconLight : MonoBehaviour {
 
 
 		Timer ();
+		if (beaconComplete) {
+			BeaconCompleted ();
+		}
 		//print (currentColor);
 		//print (waitTime);
 
@@ -216,4 +220,12 @@ public class BeaconLight : MonoBehaviour {
 		}
 
 	}
+
+	void BeaconCompleted()
+	{
+		beaconLight.color = Color.green;
+		currentColor = 5;
+		beaconLight.enabled = true;
+	}
+
 }

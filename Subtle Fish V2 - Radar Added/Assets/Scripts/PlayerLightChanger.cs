@@ -38,28 +38,32 @@ public class PlayerLightChanger : MonoBehaviour {
 		if (lightCounter < 1) {
 			playerLight.color = Color.white;
 		}
-		if (Input.GetButton ("yellowLight")) {
+		if (Input.GetButtonDown ("yellowLight")) {
 			playerLight.color = Color.yellow;
 			startTimer = true;
 			lightCounter = lightTimerAmount;
 			buttonPressed = true;
 		}
-		if (Input.GetButton ("orangeLight")) {
+		if (Input.GetButtonDown ("orangeLight")) {
 			playerLight.color = darkOrange;
 			startTimer = true;
 			lightCounter = lightTimerAmount;
 			buttonPressed = true;
 		}
-		if (Input.GetButton ("purpleLight")) {
+		if (Input.GetButtonDown ("purpleLight")) {
 			playerLight.color = purple;
 			startTimer = true;
 			lightCounter = lightTimerAmount;
 			buttonPressed = true;}
-		if (Input.GetButton ("greenLight")) {
+		if (Input.GetButtonDown ("greenLight")) {
 			playerLight.color = Color.green;
 			startTimer = true;
 			lightCounter = lightTimerAmount;
 			buttonPressed = true;
+		}
+
+		if (colorStage == 4) {
+			BeaconLight.beaconComplete = true;
 		}
 
 		if (colorStage == 3) {
@@ -87,7 +91,7 @@ public class PlayerLightChanger : MonoBehaviour {
 				colorStage = 2;
 				buttonPressed = false;
 			} else if (playerLight.color != BeaconLight.secondColor && buttonPressed == true){
-				//ResetPlayerColors ();
+				ResetPlayerColors ();
 			}
 		}
 
@@ -125,4 +129,5 @@ public class PlayerLightChanger : MonoBehaviour {
 		colorStage = 0;
 		buttonPressed = false;
 	}
+		
 }
