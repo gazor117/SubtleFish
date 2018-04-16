@@ -3,7 +3,13 @@ guid: 5e5346b4578996741bdd2b1d143e588c
 timeCreated: 1523901809
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: NEWjellyfishspritesheet_0
+    21300002: NEWjellyfishspritesheet_1
+    21300004: NEWjellyfishspritesheet_2
+    21300006: NEWjellyfishspritesheet_3
+    21300008: NEWjellyfishspritesheet_4
+    21300010: NEWjellyfishspritesheet_5
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -66,9 +72,75 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NEWjellyfishspritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 35
+        width: 244
+        height: 409
+      alignment: 9
+      pivot: {x: 0.4760959, y: 0.7388658}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NEWjellyfishspritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 82
+        width: 346
+        height: 346
+      alignment: 9
+      pivot: {x: 0.50421405, y: 0.6475007}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NEWjellyfishspritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 68
+        width: 274
+        height: 373
+      alignment: 9
+      pivot: {x: 0.47339112, y: 0.6759163}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NEWjellyfishspritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 33
+        width: 240
+        height: 399
+      alignment: 9
+      pivot: {x: 0.54860485, y: 0.72657984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

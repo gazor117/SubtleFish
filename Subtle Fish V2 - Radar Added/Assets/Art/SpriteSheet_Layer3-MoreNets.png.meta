@@ -3,7 +3,14 @@ guid: b4df7cf782dae874e8a40c40540e4488
 timeCreated: 1523901905
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SpriteSheet_Layer3-MoreNets_0
+    21300002: SpriteSheet_Layer3-MoreNets_1
+    21300004: SpriteSheet_Layer3-MoreNets_2
+    21300006: SpriteSheet_Layer3-MoreNets_3
+    21300008: SpriteSheet_Layer3-MoreNets_4
+    21300010: SpriteSheet_Layer3-MoreNets_5
+    21300012: SpriteSheet_Layer3-MoreNets_6
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +47,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -66,9 +73,117 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Layer3-MoreNets_0
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 780
+        width: 464
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Layer3-MoreNets_1
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 783
+        width: 463
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Layer3-MoreNets_2
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 469
+        width: 522
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Layer3-MoreNets_3
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 471
+        width: 522
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Layer3-MoreNets_4
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 156
+        width: 694
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Layer3-MoreNets_5
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 135
+        width: 684
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpriteSheet_Layer3-MoreNets_6
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 135
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
