@@ -16,9 +16,14 @@ public class Radar : MonoBehaviour {
 	void Start () {
 		createdRadarObjects ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
+		foreach (GameObject o in objectsTracked) {
+
+
+
+		}
 		for (int i = 0; i < radarObjects.Count; i++) {
 			if (Vector3.Distance (radarObjects [i].transform.position, transform.position) > switchDistance) {
 				helpTransform.LookAt (radarObjects [i].transform);
@@ -32,14 +37,16 @@ public class Radar : MonoBehaviour {
 		}
 	}
 
-	void createdRadarObjects () {
+	public void createdRadarObjects () {
 		radarObjects = new List<GameObject> ();
 		borderObjects = new List<GameObject> ();
 		foreach (GameObject o in objectsTracked) {
 			GameObject clone = Instantiate (radarPrefab, o.transform.position, Quaternion.identity) as GameObject;
 			radarObjects.Add (clone);
+			clone.transform.parent = o.transform;
 			GameObject borderClone = Instantiate (radarPrefab, o.transform.position, Quaternion.identity) as GameObject;
 			borderObjects.Add (borderClone);
+			borderClone.transform.parent = o.transform;
 		}
 	}
 }
