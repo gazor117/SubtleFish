@@ -2154,6 +2154,11 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 595091169}
+    - target: {fileID: 20694442903119490, guid: b4e251318830749429a3a8bcb1b9d9c2,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294966527
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4e251318830749429a3a8bcb1b9d9c2, type: 2}
   m_IsPrefabParent: 0
