@@ -9,6 +9,7 @@ public class BeaconLight : MonoBehaviour {
 	Color pink;
 	Color purple;
 	Color darkOrange; 
+	Color maroon;
 	public static Color firstColor, secondColor, thirdColor, fourthColor; // first - fourth colors in the current beacon sequence
 	public static string[] colors = new string[4] {"yellow", "orange", "purple", "green"};
 	int randomIndex;
@@ -38,6 +39,7 @@ public class BeaconLight : MonoBehaviour {
 		pink = new Color (255/255f, 192/255f, 203/225f);
 		purple = new Color (255/255f, 0 / 255f, 255/255f);
 		darkOrange = new Color (255 / 255f, 127 / 255f, 80 / 255f);
+		maroon = new Color (255/255f, 0/255f, 0/225f);
 
 		lightCounter = lightTimerAmount; 
 		waitTime = beaconWaitTime;
@@ -81,8 +83,8 @@ public class BeaconLight : MonoBehaviour {
 		if (startSequenceTimer) {
 			if (currentColor == 1) {
 				if (colors [color1] == "yellow") {
-					beaconLight.color = Color.yellow;
-					firstColor = Color.yellow;
+					beaconLight.color = maroon;
+					firstColor = maroon;
 				}
 				if (colors [color1] =="orange") {
 					beaconLight.color = darkOrange;
@@ -99,8 +101,8 @@ public class BeaconLight : MonoBehaviour {
 			}
 			if (currentColor == 2) {
 				if (colors [color2] == "yellow") {
-					beaconLight.color = Color.yellow;
-					secondColor = Color.yellow;
+					beaconLight.color = maroon;
+					secondColor = maroon;
 				}
 				if (colors [color2] == "orange") {
 					beaconLight.color = darkOrange;
@@ -117,8 +119,8 @@ public class BeaconLight : MonoBehaviour {
 			}
 			if (currentColor == 3) {
 				if (colors [color3] == "yellow") {
-					beaconLight.color = Color.yellow;
-					thirdColor = Color.yellow;
+					beaconLight.color = maroon;
+					thirdColor = maroon;
 				}
 				if (colors [color3] == "orange") {
 					beaconLight.color = darkOrange;
@@ -135,8 +137,8 @@ public class BeaconLight : MonoBehaviour {
 			}
 			if (currentColor == 4) {
 				if (colors [color4] == "yellow") {
-					beaconLight.color = Color.yellow;
-					fourthColor = Color.yellow;
+					beaconLight.color = maroon;
+					fourthColor = maroon;
 				}
 				if (colors [color4] == "orange") {
 					beaconLight.color = darkOrange;

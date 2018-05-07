@@ -10,7 +10,7 @@ public class PlayerLightChanger : MonoBehaviour {
 	Color startColor;
 	bool startTimer = false;
 	string playerColor;
-	Color pink;
+	Color maroon;
 	Color purple;
 	Color darkOrange;
 	public static string correctSequence;
@@ -27,7 +27,7 @@ public class PlayerLightChanger : MonoBehaviour {
 		playerLight = GetComponent<Light>();
 		//startColor = playerLight.color;
 		lightCounter = lightTimerAmount;
-		pink = new Color (255/255f, 192/255f, 203/225f);
+		maroon = new Color (255/255f, 0/255f, 0/225f);
 		purple = new Color (255/255f, 0 / 255f, 255/255f);
 		darkOrange = new Color (255 / 255f, 127 / 255f, 80 / 255f);
 	}
@@ -39,7 +39,7 @@ public class PlayerLightChanger : MonoBehaviour {
 			playerLight.color = Color.white;
 		}
 		if (Input.GetButtonDown ("yellowLight")) {
-			playerLight.color = Color.yellow;
+			playerLight.color = maroon;
 			startTimer = true;
 			lightCounter = lightTimerAmount;
 			buttonPressed = true;
