@@ -2798,14 +2798,6 @@ Prefab:
       propertyPath: objectsTracked.Array.data[2]
       value: 
       objectReference: {fileID: 1701798835}
-    - target: {fileID: 4213659455505110, guid: 5ff1ce67b859ba9469f547ba588cc89e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -61.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4213659455505110, guid: 5ff1ce67b859ba9469f547ba588cc89e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ff1ce67b859ba9469f547ba588cc89e, type: 2}
   m_IsPrefabParent: 0
