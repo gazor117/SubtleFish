@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33957004630025938}
   - component: {fileID: 135386520254816342}
   - component: {fileID: 23150521969835222}
+  - component: {fileID: 114477948264182828}
   m_Layer: 8
   m_Name: radarUI
   m_TagString: Untagged
@@ -454,7 +455,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1795333571160130}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7700002, y: -1.1, z: 0}
+  m_LocalPosition: {x: -2.7700002, y: -1.1, z: -0.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4442301031252612}
@@ -467,8 +468,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1477486407315216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -122.7, y: -8.1, z: 0}
+  m_LocalScale: {x: 2.5191019, y: 2.5191038, z: 2.5191038}
   m_Children: []
   m_Father: {fileID: 4460297118393080}
   m_RootOrder: 2
@@ -916,6 +917,24 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   playerMove: {fileID: 114068107019793160}
   canBeSeen: 1
+--- !u!114 &114477948264182828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1036960386519816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c94114bba858e44bae9bcbebe926b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsTracked:
+  - {fileID: 0}
+  - {fileID: 0}
+  radarPrefab: {fileID: 1898153833487234, guid: a32a38212f37386419cd4b76dbebcf00,
+    type: 2}
+  switchDistance: 12.72
+  helpTransform: {fileID: 4473037775617088}
 --- !u!114 &114562959792895280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -947,13 +966,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1175101909675230}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c94114bba858e44bae9bcbebe926b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectsTracked:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   radarPrefab: {fileID: 1898153833487234, guid: a32a38212f37386419cd4b76dbebcf00,
