@@ -2778,6 +2778,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114709566829806470, guid: e4e56882e5db07d4097059f5ed942fe0,
+        type: 2}
+      propertyPath: oxygenUI
+      value: 
+      objectReference: {fileID: 594984057}
     - target: {fileID: 114367854690120316, guid: e4e56882e5db07d4097059f5ed942fe0,
         type: 2}
       propertyPath: objectsTracked.Array.data[0]
@@ -2793,11 +2798,6 @@ Prefab:
       propertyPath: objectsTracked.Array.data[2]
       value: 
       objectReference: {fileID: 1701798835}
-    - target: {fileID: 114709566829806470, guid: e4e56882e5db07d4097059f5ed942fe0,
-        type: 2}
-      propertyPath: oxygenUI
-      value: 
-      objectReference: {fileID: 594984057}
     - target: {fileID: 1508982936887948, guid: e4e56882e5db07d4097059f5ed942fe0, type: 2}
       propertyPath: m_Name
       value: Player
