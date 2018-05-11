@@ -25,8 +25,10 @@ public class BeaconLight : MonoBehaviour {
 	int currentNum = 0;
 	int currentColor = 1;
 	public static int color1, color2, color3, color4;
+	private int privateColor1, privateColor2, privateColor3, privateColor4;
 	public static bool playerInBeacon = false;
 	public static bool beaconComplete;
+	private bool closestBeacon;
 	//bool sequenceComplete = false;
 
 
@@ -70,15 +72,22 @@ public class BeaconLight : MonoBehaviour {
 
 		currentNum ++;
 		if (currentNum == 1) { // Randomly assigns four colors in the beacon sequence
-			color1 = randomIndex;
+			privateColor1 = randomIndex;
 		}if (currentNum == 2) {
-			color2 = randomIndex;
+			privateColor2 = randomIndex;
 		}if (currentNum == 3) {
-			color3 = randomIndex;
+			privateColor3 = randomIndex;
 		}if (currentNum == 4) {
-			color4 = randomIndex;
+			privateColor4 = randomIndex;
 			startSequenceTimer = true;
 		}
+
+		color1 = privateColor1;
+		color2 = privateColor2;
+		color3 = privateColor3;
+		color4 = privateColor4;
+
+
 
 		if (startSequenceTimer) {
 			if (currentColor == 1) {
@@ -157,7 +166,7 @@ public class BeaconLight : MonoBehaviour {
 
 
 		Timer ();
-		if (beaconComplete) {
+		if (beaconComplete && closestBeacon) {
 			BeaconCompleted ();
 		}
 		//print (currentColor);
@@ -170,6 +179,8 @@ public class BeaconLight : MonoBehaviour {
 		if (col.tag == "Player") {
 			print ("Player Detected");
 			playerInBeacon = true;
+			closestBeacon = true;
+
 		}
 	}
 
@@ -178,6 +189,7 @@ public class BeaconLight : MonoBehaviour {
 		if (col.tag == "Player") {
 			print ("Player outside beacon");
 			playerInBeacon = false;
+			closestBeacon = false;
 		}
 	}
 

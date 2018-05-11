@@ -38,36 +38,39 @@ public class PlayerLightChanger : MonoBehaviour {
 		if (lightCounter < 1) {
 			playerLight.color = Color.white;
 		}
-		if (Input.GetButtonDown ("yellowLight")) {
-			playerLight.color = maroon;
-			startTimer = true;
-			lightCounter = lightTimerAmount;
-			buttonPressed = true;
-		}
-		if (Input.GetButtonDown ("orangeLight")) {
-			playerLight.color = darkOrange;
-			startTimer = true;
-			lightCounter = lightTimerAmount;
-			buttonPressed = true;
-		}
-		if (Input.GetButtonDown ("purpleLight")) {
-			playerLight.color = purple;
-			startTimer = true;
-			lightCounter = lightTimerAmount;
-			buttonPressed = true;}
-		if (Input.GetButtonDown ("greenLight")) {
-			playerLight.color = Color.green;
-			startTimer = true;
-			lightCounter = lightTimerAmount;
-			buttonPressed = true;
-		}
+
+			if (Input.GetButtonDown ("yellowLight")) {
+				playerLight.color = maroon;
+				startTimer = true;
+				lightCounter = lightTimerAmount;
+				buttonPressed = true;
+			}
+			if (Input.GetButtonDown ("orangeLight")) {
+				playerLight.color = darkOrange;
+				startTimer = true;
+				lightCounter = lightTimerAmount;
+				buttonPressed = true;
+			}
+			if (Input.GetButtonDown ("purpleLight")) {
+				playerLight.color = purple;
+				startTimer = true;
+				lightCounter = lightTimerAmount;
+				buttonPressed = true;
+			}
+			if (Input.GetButtonDown ("greenLight")) {
+				playerLight.color = Color.green;
+				startTimer = true;
+				lightCounter = lightTimerAmount;
+				buttonPressed = true;
+			}
+
 
 		if (colorStage == 4) {
 			BeaconLight.beaconComplete = true;
 		}
 
 		if (colorStage == 3) {
-			if (playerLight.color == BeaconLight.fourthColor && buttonPressed == true) {
+			if (playerLight.color == BeaconLight.fourthColor && buttonPressed == true && BeaconLight.playerInBeacon == true) {
 				//print ("Color 4 correct");
 				colorStage = 4;
 				buttonPressed = false;
@@ -77,7 +80,7 @@ public class PlayerLightChanger : MonoBehaviour {
 		}
 
 		if (colorStage == 2) {
-			if (playerLight.color == BeaconLight.thirdColor && buttonPressed == true) {
+			if (playerLight.color == BeaconLight.thirdColor && buttonPressed == true && BeaconLight.playerInBeacon == true) {
 				//print ("Color 3 correct");
 				colorStage = 3;
 				buttonPressed = false;
@@ -86,7 +89,7 @@ public class PlayerLightChanger : MonoBehaviour {
 			}
 		}
 		if (colorStage == 1){
-			if (playerLight.color == BeaconLight.secondColor && buttonPressed == true) {
+			if (playerLight.color == BeaconLight.secondColor && buttonPressed == true && BeaconLight.playerInBeacon == true) {
 				//print ("Color 2 correct");
 				colorStage = 2;
 				buttonPressed = false;
@@ -96,7 +99,7 @@ public class PlayerLightChanger : MonoBehaviour {
 		}
 
 		if (colorStage == 0) {
-			if (playerLight.color == BeaconLight.firstColor && buttonPressed == true) {
+			if (playerLight.color == BeaconLight.firstColor && buttonPressed == true && BeaconLight.playerInBeacon == true) {
 				//print ("Color 1 correct");
 				colorStage = 1;
 				buttonPressed = false;
@@ -106,8 +109,8 @@ public class PlayerLightChanger : MonoBehaviour {
 		}
 		//print (lightCounter);
 		Timer ();
-		print (colorStage);
-		print (buttonPressed);
+		//print (colorStage);
+		//print (buttonPressed);
 	}
 
 	void Timer()
