@@ -1002,6 +1002,26 @@ Prefab:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 114610064262341190, guid: dbc04761e5327204499d1860c23b032f,
+        type: 2}
+      propertyPath: patrolPoint1
+      value: 
+      objectReference: {fileID: 985792584}
+    - target: {fileID: 114610064262341190, guid: dbc04761e5327204499d1860c23b032f,
+        type: 2}
+      propertyPath: patrolPoint2
+      value: 
+      objectReference: {fileID: 1976844919}
+    - target: {fileID: 114307824771401288, guid: dbc04761e5327204499d1860c23b032f,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 367166932}
+    - target: {fileID: 114307824771401288, guid: dbc04761e5327204499d1860c23b032f,
+        type: 2}
+      propertyPath: alert
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbc04761e5327204499d1860c23b032f, type: 2}
   m_IsPrefabParent: 0
