@@ -2754,12 +2754,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114550484741778462, guid: dbc04761e5327204499d1860c23b032f,
-        type: 2}
-      propertyPath: subCloak
-      value: 
-      objectReference: {fileID: 1529190008}
-    - target: {fileID: 114307824771401288, guid: dbc04761e5327204499d1860c23b032f,
+    - target: {fileID: 114654623198691666, guid: dbc04761e5327204499d1860c23b032f,
         type: 2}
       propertyPath: player
       value: 
@@ -2774,11 +2769,16 @@ Prefab:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 1073824810}
-    - target: {fileID: 114654623198691666, guid: dbc04761e5327204499d1860c23b032f,
+    - target: {fileID: 114307824771401288, guid: dbc04761e5327204499d1860c23b032f,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 595091169}
+    - target: {fileID: 114550484741778462, guid: dbc04761e5327204499d1860c23b032f,
+        type: 2}
+      propertyPath: subCloak
+      value: 
+      objectReference: {fileID: 1529190008}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbc04761e5327204499d1860c23b032f, type: 2}
   m_IsPrefabParent: 0

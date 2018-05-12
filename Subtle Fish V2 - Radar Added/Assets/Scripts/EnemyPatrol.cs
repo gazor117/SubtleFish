@@ -61,7 +61,7 @@ public class EnemyPatrol : MonoBehaviour {
 		// Manage Animations
 		// If diatance betweeen source and target < 6 then set Walk animation
 		// Otherwise set Run Animation
-		if (Vector3.Distance (source, target) < 6.0) {
+		/*if (Vector3.Distance (source, target) < 6.0) {
 
 			Debug.Log (Vector3.Distance (source, target));
 
@@ -72,7 +72,7 @@ public class EnemyPatrol : MonoBehaviour {
 
 			animator.SetBool ("runBool", true);
 			animator.SetBool ("walkBool", false);
-		}
+		}*/
 	}
 	// Arrive function
 	private Vector3 Arrive (Vector3 source, Vector3 target)
