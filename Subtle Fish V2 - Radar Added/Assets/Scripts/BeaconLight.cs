@@ -237,7 +237,7 @@ public class BeaconLight : MonoBehaviour {
 
 	void BeaconCompleted()
 	{
-		beaconLight.color = Color.green;
+		beaconLight.color = Color.white;
 		currentColor = 5;
 		beaconLight.enabled = true;
 	}
