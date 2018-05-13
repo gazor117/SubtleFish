@@ -9,7 +9,7 @@ public class EnemyPatrol : MonoBehaviour {
 	private GameObject currentTarget;
 	//private Scene1_Script1 waypointManager;
 	Rigidbody2D rb;
-	const float DECELERATION_FACTOR = 2.0f;
+	public float DECELERATION_FACTOR = 2.0f;
 	// Now variables needed by FixedUpdate
 	Vector2 source;
 	Vector2 target;
