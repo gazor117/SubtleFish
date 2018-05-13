@@ -8,7 +8,7 @@ public class Hide : MonoBehaviour {
 	Renderer rend;
 	public SubmarineMovement playerMove;
 	private Renderer[] sprites;
-	public bool canBeSeen = true;
+	public static bool canBeSeen = true;
 
 	// Use this for initialization
 	void Start () {
@@ -19,24 +19,24 @@ public class Hide : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		 
-		if (Input.GetMouseButtonDown (0)) {
+		if (canBeSeen) {
 			rend.enabled = true;
-			playerMove.enabled = true;
+			//playerMove.enabled = true;
 			foreach (SpriteRenderer child in sprites)
 			{
 				child.enabled = true;
 			}
-			canBeSeen = true;
+
 	}
 
-		if (Input.GetMouseButtonDown (1)) {
+		if (canBeSeen == false) {
 			rend.enabled = false;
-			playerMove.enabled = false;
+			//playerMove.enabled = false;
 			foreach (SpriteRenderer child in sprites)
 			{
 				child.enabled = false;
 			}
-			canBeSeen = false;
+
 		}
 	}
 }
