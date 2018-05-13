@@ -29,7 +29,8 @@ public class BeaconLight : MonoBehaviour {
 	public static bool playerInBeacon = false;
 	public static bool beaconComplete;
 	private bool closestBeacon;
-	//bool sequenceComplete = false;
+    //bool sequenceComplete = false;
+    public AudioSource BeaconComplete;
 
 
 
@@ -240,6 +241,7 @@ public class BeaconLight : MonoBehaviour {
 		beaconLight.color = Color.white;
 		currentColor = 5;
 		beaconLight.enabled = true;
+        BeaconComplete.Play();
 	}
 
 }
