@@ -2263,6 +2263,10 @@ Prefab:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 1073824810}
+    - target: {fileID: 1901638483935172, guid: 7e2f46e749e7e084f949f46afb1859ae, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e2f46e749e7e084f949f46afb1859ae, type: 2}
   m_IsPrefabParent: 0
@@ -2779,6 +2783,16 @@ Prefab:
       propertyPath: subCloak
       value: 
       objectReference: {fileID: 1529190008}
+    - target: {fileID: 114654623198691666, guid: dbc04761e5327204499d1860c23b032f,
+        type: 2}
+      propertyPath: angle
+      value: -75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654623198691666, guid: dbc04761e5327204499d1860c23b032f,
+        type: 2}
+      propertyPath: timer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbc04761e5327204499d1860c23b032f, type: 2}
   m_IsPrefabParent: 0
@@ -2848,6 +2862,10 @@ Prefab:
     - target: {fileID: 114367854690120316, guid: e4e56882e5db07d4097059f5ed942fe0,
         type: 2}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131055708147796, guid: e4e56882e5db07d4097059f5ed942fe0, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

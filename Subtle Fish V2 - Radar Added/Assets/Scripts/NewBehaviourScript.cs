@@ -27,7 +27,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		}
 
 		if (chase.alert == false) {
-			transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.Euler (transform.rotation.x, transform.rotation.y, angle), Time.deltaTime / timer);
+			transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.Euler (transform.rotation.x, transform.rotation.y, angle), Time.deltaTime / timer * 2);
 		} else {
 			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.Euler(0, 0, rotZ-offSet), Time.deltaTime / timer);
 		} 
