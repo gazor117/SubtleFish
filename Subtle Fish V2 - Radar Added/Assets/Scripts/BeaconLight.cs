@@ -29,6 +29,8 @@ public class BeaconLight : MonoBehaviour {
 	public static bool playerInBeacon = false;
 	public static bool beaconComplete;
 	private bool closestBeacon;
+	bool playSound = false;
+	bool toggleChange = false;
     //bool sequenceComplete = false;
     public AudioSource BeaconComplete;
 
@@ -46,6 +48,7 @@ public class BeaconLight : MonoBehaviour {
 
 		lightCounter = lightTimerAmount; 
 		waitTime = beaconWaitTime;
+
 
 	}
 
@@ -164,7 +167,11 @@ public class BeaconLight : MonoBehaviour {
 				}
 			}
 		}
-
+		if (playSound) {
+			BeaconComplete.Play ();
+			toggleChange = true;
+			playSound = false;
+		}
 
 		Timer ();
 		if (beaconComplete && closestBeacon) {
@@ -241,7 +248,9 @@ public class BeaconLight : MonoBehaviour {
 		beaconLight.color = Color.white;
 		currentColor = 5;
 		beaconLight.enabled = true;
-        BeaconComplete.Play();
+		if (toggleChange == false) {
+			playSound = true;
+		}
 	}
 
 }
