@@ -20,6 +20,7 @@ public class PlayerLightChanger : MonoBehaviour {
 	public static bool light4correct = false;*/
 	public int colorStage = 0;
 	bool buttonPressed = false;
+	public float radius = 10;
 
 
 	// Use this for initialization
@@ -131,6 +132,17 @@ public class PlayerLightChanger : MonoBehaviour {
 	{
 		colorStage = 0;
 		buttonPressed = false;
+
+		Collider[] colliders = Physics.OverlapSphere (transform.position, radius);
+
+		foreach (Collider nearbyObject in colliders) {
+			EnemyPatrol EP = nearbyObject.GetComponent<EnemyPatrol> ();
+
+			if (EP != null) {
+				EP.enemyAlerted ();
+			}
+
+		}
 	}
 		
 }

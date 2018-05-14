@@ -38,7 +38,6 @@ public class BeaconLight : MonoBehaviour {
 
 
 
-
 	void Start () {
 		beaconLight = GetComponentInChildren<Light> ();
 		pink = new Color (255/255f, 192/255f, 203/225f);

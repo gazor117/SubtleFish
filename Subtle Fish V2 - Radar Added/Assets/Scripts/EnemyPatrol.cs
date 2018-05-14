@@ -19,6 +19,10 @@ public class EnemyPatrol : MonoBehaviour {
 	Vector2 velocityToTarget;
 	float distanceToTarget;
 	float speed;
+	public float movementSpeed = 2.5f;
+	public bool searchBeacon = false;
+	Vector2 beaconCheck;
+	public GameObject beacon; 
 
 	// Setup a variable to point to the Animator Controller for the character
 	Animator animator;
@@ -42,19 +46,31 @@ public class EnemyPatrol : MonoBehaviour {
 	{
 		source = transform.position;
 		target = currentTarget.transform.position;
+		beaconCheck = beacon.transform.position;
 
 		// Get the orientation of Teddy and look at current target
 		//GetComponent<Transform>().LookAt(currentTarget.transform);
+		if (!searchBeacon) {
+			outputVelocity = Arrive (source, target);
+			rb.AddForce ((outputVelocity / 20) * movementSpeed);
 
-		outputVelocity = Arrive (source, target);
-		rb.AddForce (outputVelocity/8);
+			if (Vector3.Distance (source, target) < PROXIMITY_DISTANCE) {
+				currentTarget = NextWaypoint (currentTarget);
+			}
+		} else {
+			outputVelocity = Arrive (source, beaconCheck);
+			rb.AddForce ((outputVelocity / 20) * movementSpeed);
+
+			if (Vector3.Distance (source, beaconCheck) < PROXIMITY_DISTANCE) {
+				searchBeacon = false;
+			}
+
+		}
 		// Check the distance from object to target, and make query
 		// When it moves within the PROXIMITY_DISTANCE
 
 
-		if (Vector3.Distance (source, target) < PROXIMITY_DISTANCE) {
-			currentTarget = NextWaypoint (currentTarget);
-		}
+
 
 		//Debug.Log (Vector3.Distance (source, target));
 
@@ -97,5 +113,9 @@ public class EnemyPatrol : MonoBehaviour {
 			nextIndex = 0;
 		}
 		return waypoints [nextIndex];
+	}
+
+ public void enemyAlerted () { 
+		searchBeacon = true;
 	}
 }
