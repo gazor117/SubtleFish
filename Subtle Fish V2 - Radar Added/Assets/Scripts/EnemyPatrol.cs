@@ -34,7 +34,7 @@ public class EnemyPatrol : MonoBehaviour {
 		//GetComponent<Transform>().LookAt(currentTarget.transform);
 
 		//get the Animator Controller Component from the character component hierarchy
-		animator = GetComponent<Animator>();
+		animator = GetComponentInChildren<Animator>();
 		rb = GetComponent<Rigidbody2D> ();
 	}
 
@@ -61,18 +61,11 @@ public class EnemyPatrol : MonoBehaviour {
 		// Manage Animations
 		// If diatance betweeen source and target < 6 then set Walk animation
 		// Otherwise set Run Animation
-		/*if (Vector3.Distance (source, target) < 6.0) {
-
-			Debug.Log (Vector3.Distance (source, target));
-
-			animator.SetBool ("runBool", false);
-			animator.SetBool ("walkBool", true);
-
-		} else if(Vector3.Distance (source, target) > 6.0) {
-
-			animator.SetBool ("runBool", true);
-			animator.SetBool ("walkBool", false);
-		}*/
+		if (rb.velocity.x > 0) {
+			animator.SetBool ("moveLeft", false);
+		} else {
+			animator.SetBool ("moveLeft", true);
+		}
 	}
 	// Arrive function
 	private Vector3 Arrive (Vector3 source, Vector3 target)
