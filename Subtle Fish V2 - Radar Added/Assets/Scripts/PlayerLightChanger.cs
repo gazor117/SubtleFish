@@ -132,10 +132,10 @@ public class PlayerLightChanger : MonoBehaviour {
 	{
 		colorStage = 0;
 		buttonPressed = false;
+		Debug.Log ("Yes");
+		Collider2D[] colliders = Physics2D.OverlapCircleAll (transform.position, radius);
 
-		Collider[] colliders = Physics.OverlapSphere (transform.position, radius);
-
-		foreach (Collider nearbyObject in colliders) {
+		foreach (Collider2D nearbyObject in colliders) {
 			EnemyPatrol EP = nearbyObject.GetComponent<EnemyPatrol> ();
 
 			if (EP != null) {
