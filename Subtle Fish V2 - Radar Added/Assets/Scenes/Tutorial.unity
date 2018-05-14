@@ -1183,12 +1183,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 367166932}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f189515ba5d6ad74c8d071af77a763cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxygenDecrease: 0.1
+  oxygenDecrease: 0.05
   oxygenUI: {fileID: 1044573659}
 --- !u!68 &367166936
 EdgeCollider2D:
