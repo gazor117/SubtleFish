@@ -21,6 +21,7 @@ public class PlayerLightChanger : MonoBehaviour {
 	public int colorStage = 0;
 	bool buttonPressed = false;
 	public float radius = 10;
+	public static bool allBeaconsDone = false;
 
 
 	// Use this for initialization
