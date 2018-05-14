@@ -33,6 +33,10 @@ public class BeaconLight : MonoBehaviour {
 	bool toggleChange = false;
     //bool sequenceComplete = false;
     public AudioSource BeaconComplete;
+	public int beaconAmount;
+	public static int publicBeaconAmount;
+	public static int beaconsCompleted = 0;
+
 
 
 
@@ -48,7 +52,8 @@ public class BeaconLight : MonoBehaviour {
 		lightCounter = lightTimerAmount; 
 		waitTime = beaconWaitTime;
 
-
+		publicBeaconAmount = beaconAmount;
+		PlayerLightChanger.allBeaconsDone = false;
 	}
 
 
@@ -176,6 +181,9 @@ public class BeaconLight : MonoBehaviour {
 		if (beaconComplete && closestBeacon) {
 			BeaconCompleted ();
 		}
+		if (beaconsCompleted == publicBeaconAmount) {
+			PlayerLightChanger.allBeaconsDone = true;
+		}
 		//print (currentColor);
 		//print (waitTime);
 
@@ -249,6 +257,7 @@ public class BeaconLight : MonoBehaviour {
 		beaconLight.enabled = true;
 		if (toggleChange == false) {
 			playSound = true;
+			beaconsCompleted ++;
 		}
 	}
 

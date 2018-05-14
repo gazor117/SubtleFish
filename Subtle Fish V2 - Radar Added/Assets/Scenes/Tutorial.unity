@@ -4756,6 +4756,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &869562977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 869562980}
+  - component: {fileID: 869562979}
+  - component: {fileID: 869562978}
+  m_Layer: 0
+  m_Name: LevelChangeTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &869562978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 869562977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b155ee04ee511e45b8b55c8c60af4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+--- !u!61 &869562979
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 869562977}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.14782715, y: 0.40652084}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.7739258, y: 10.682678}
+  m_EdgeRadius: 0
+--- !u!4 &869562980
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 869562977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 116.56, y: 17.531914, z: 0.03125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &869783332
 GameObject:
   m_ObjectHideFlags: 0
@@ -6417,6 +6484,7 @@ GameObject:
   - component: {fileID: 1172271115}
   - component: {fileID: 1172271116}
   - component: {fileID: 1172271114}
+  - component: {fileID: 1172271109}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -6440,7 +6508,7 @@ MonoBehaviour:
   scrollPos: {x: 140.67357, y: 47.149246}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 200
+  blockViewHeight: 98
   zoom: 0.66999984
   scrollViewRect:
     serializedVersion: 2
@@ -6510,7 +6578,7 @@ MonoBehaviour:
   itemId: 0
   blockName: Opening Text
   description: Text when the Tutorial Level Starts
-  eventHandler: {fileID: 0}
+  eventHandler: {fileID: 1172271109}
   commandList:
   - {fileID: 1172271108}
   - {fileID: 1172271107}
@@ -6810,6 +6878,19 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 0}
+--- !u!114 &1172271109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1172271094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1172271097}
+  waitForFrames: 1
 --- !u!4 &1172271110
 Transform:
   m_ObjectHideFlags: 0
@@ -10241,6 +10322,11 @@ Prefab:
       propertyPath: BeaconComplete
       value: 
       objectReference: {fileID: 859162018}
+    - target: {fileID: 114086578760000754, guid: 6aa0bd241d32bf04ca4f428dfff20fba,
+        type: 2}
+      propertyPath: beaconAmount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6aa0bd241d32bf04ca4f428dfff20fba, type: 2}
   m_IsPrefabParent: 0
@@ -10368,7 +10454,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1969167320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.309708, y: -24.109758, z: 0.83777905}
+  m_LocalPosition: {x: -20.88, y: -24.109758, z: 0.83777905}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 44141486}

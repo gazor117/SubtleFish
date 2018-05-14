@@ -21,6 +21,7 @@ public class PlayerLightChanger : MonoBehaviour {
 	public int colorStage = 0;
 	bool buttonPressed = false;
 	public float radius = 10;
+	public static bool allBeaconsDone = false;
 
 
 	// Use this for initialization
@@ -133,15 +134,17 @@ public class PlayerLightChanger : MonoBehaviour {
 		colorStage = 0;
 		buttonPressed = false;
 		Debug.Log ("Yes");
-		Collider2D[] colliders = Physics2D.OverlapCircleAll (transform.position, radius);
+		if (BeaconLight.playerInBeacon) {
+			Collider2D[] colliders = Physics2D.OverlapCircleAll (transform.position, radius);
 
-		foreach (Collider2D nearbyObject in colliders) {
-			EnemyPatrol EP = nearbyObject.GetComponent<EnemyPatrol> ();
+			foreach (Collider2D nearbyObject in colliders) {
+				EnemyPatrol EP = nearbyObject.GetComponent<EnemyPatrol> ();
 
-			if (EP != null) {
-				EP.enemyAlerted ();
+				if (EP != null) {
+					EP.enemyAlerted ();
+				}
+
 			}
-
 		}
 	}
 		
