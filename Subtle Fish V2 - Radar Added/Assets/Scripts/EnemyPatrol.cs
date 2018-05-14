@@ -56,7 +56,7 @@ public class EnemyPatrol : MonoBehaviour {
 			currentTarget = NextWaypoint (currentTarget);
 		}
 
-		Debug.Log (Vector3.Distance (source, target));
+		//Debug.Log (Vector3.Distance (source, target));
 
 		// Manage Animations
 		// If diatance betweeen source and target < 6 then set Walk animation

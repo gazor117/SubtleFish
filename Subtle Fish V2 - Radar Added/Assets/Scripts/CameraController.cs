@@ -13,24 +13,40 @@ public class CameraController : MonoBehaviour {
 
 	public float shakeTimer;
 	public float shakeAmount;
+	public bool insideCol = true;
 
 	void Start () {
 		Cursor.visible = false; 
 	}
 
-	void FixedUpdate ()
+	void OnTriggerEnter2D (Collider2D col)
 	{
 		//Cursor.visible = false;
 		//Player = GameObject.FindGameObjectWithTag ("Player4");
-
-		if (Player == null) {
-			return;
+		if (col.tag == "mainCameraFollow") {
+			insideCol = true; 
 		}
+		}
+
+	void OnTriggerExit2D (Collider2D col)
+	{
+		//Cursor.visible = false;
+		//Player = GameObject.FindGameObjectWithTag ("Player4");
+		if (col.tag == "mainCameraFollow") {
+			insideCol = false; 
+		}
+	}
+
+	void FixedUpdate () {
+		if (insideCol == true) {
+			if (Player == null) {
+				return;
+			}
 			float posY = Mathf.SmoothDamp (transform.position.y, Player.transform.position.y, ref velocity.y, smoothTimeY);
-		    float posX = Mathf.SmoothDamp (transform.position.x, Player.transform.position.x, ref velocity.x, smoothTimeY);
-		    FollowCamera.position = new Vector3 (posX, posY+camHeight, -10);
+			float posX = Mathf.SmoothDamp (transform.position.x, Player.transform.position.x, ref velocity.x, smoothTimeY);
+			FollowCamera.position = new Vector3 (posX, posY + camHeight, -10);
 		}
-
+	}
 	/*void Update () {
 
 		if (shakeTimer >= 0) {
