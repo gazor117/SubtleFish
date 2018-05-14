@@ -6476,6 +6476,7 @@ GameObject:
   - component: {fileID: 1172271115}
   - component: {fileID: 1172271116}
   - component: {fileID: 1172271114}
+  - component: {fileID: 1172271109}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -6499,7 +6500,7 @@ MonoBehaviour:
   scrollPos: {x: 140.67357, y: 47.149246}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 200
+  blockViewHeight: 98
   zoom: 0.66999984
   scrollViewRect:
     serializedVersion: 2
@@ -6569,7 +6570,7 @@ MonoBehaviour:
   itemId: 0
   blockName: Opening Text
   description: Text when the Tutorial Level Starts
-  eventHandler: {fileID: 0}
+  eventHandler: {fileID: 1172271109}
   commandList:
   - {fileID: 1172271108}
   - {fileID: 1172271107}
@@ -6869,6 +6870,19 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 0}
+--- !u!114 &1172271109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1172271094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1172271097}
+  waitForFrames: 1
 --- !u!4 &1172271110
 Transform:
   m_ObjectHideFlags: 0
@@ -10427,7 +10441,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1969167320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.309708, y: -24.109758, z: 0.83777905}
+  m_LocalPosition: {x: -20.88, y: -24.109758, z: 0.83777905}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 44141486}
